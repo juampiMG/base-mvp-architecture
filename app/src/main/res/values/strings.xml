@@ -1,0 +1,8 @@
+<resources>
+    <string name="oh_hell">¡Oh, hell!</string>
+    <string name="default_error">An unexpected error has occurred, please try again later</string>
+    <string name="accept">Accept</string>
+    <string name="count_back_exit_message">Press again the back button to exit</string>
+    <string name="information">Information</string>
+    <string name="message_on_click">You select %1$s sample</string>
+</resources>

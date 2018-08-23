@@ -1,0 +1,158 @@
+ext {
+
+    // Android dependencies
+    supportLibraryVersion = '26.1.0'
+    servicesVersion = '11.4.2'
+    multidexVersion = '1.0.1'
+
+    // Libraries
+    reactiveAndroidVersion = '2.0.1'        // https://github.com/ReactiveX/RxAndroid
+    reactiveJavaVersion = '2.1.0'           // https://github.com/ReactiveX/RxAndroid
+    retrofitVersion = '2.3.0'               // https://github.com/square/retrofit
+    okHttpVersion = '3.8.1'                 // https://github.com/square/okhttp
+    butterknifeVersion = '8.7.0'            // https://github.com/JakeWharton/butterknife
+    glideVersion = '4.1.1'                  // https://github.com/bumptech/glide
+    lombokVersion = '1.16.10'               // https://projectlombok.org/setup/android.html
+    parcelerVersion = '1.1.8'               // https://github.com/johncarl81/parceler
+    daggerVersion = '2.15'                  // https://github.com/square/dagger
+    constraintsLayoutVersion = '1.1.0'      // https://developer.android.com/reference/android/support/constraint/ConstraintLayout.html
+    advrecyclerviewVersion = '0.10.6'       // https://github.com/h6ah4i/android-advancedrecyclerview
+    modelmapperVersion = '1.1.0'            // https://github.com/modelmapper/modelmapper
+    parcelerVersion= '1.1.9'
+    javaxAnnotationVersion= '10.0-b28'
+    adapterRetrofitVersion= '2.0.2'
+    jodaTimeVersion = '2.10'                //https://github.com/JodaOrg/joda-time
+
+    // Testing
+    jUnitVersion = '4.12'
+    assertJVersion = '1.7.0'
+    robolectricVersion = '3.8'
+    mockitoVersion = '1.10.19'
+    assertjVersion = '1.1.0'
+
+    // dependencies
+
+    deps = [
+            app : [
+                    implementation: [
+                            "com.android.support:multidex:${multidexVersion}",
+                            "com.android.support:support-v13:${supportLibraryVersion}",
+                            "com.android.support:appcompat-v7:${supportLibraryVersion}",
+                            "com.android.support:design:${supportLibraryVersion}",
+                            "com.android.support:percent:${supportLibraryVersion}",
+                            "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+                            "com.android.support:cardview-v7:${supportLibraryVersion}",
+                            "com.android.support.constraint:constraint-layout:${constraintsLayoutVersion}",
+
+                            "com.google.dagger:dagger-android-support:${daggerVersion}",
+
+                            "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+                            "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+                            "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+                            "com.squareup.retrofit2:converter-scalars:${retrofitVersion}",
+                            "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+                            "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+
+                            "org.modelmapper:modelmapper:${modelmapperVersion}",
+                            "io.reactivex.rxjava2:rxandroid:${reactiveAndroidVersion}",
+                            "io.reactivex.rxjava2:rxjava:${reactiveJavaVersion}",
+
+                            "com.jakewharton:butterknife:${butterknifeVersion}",
+                            "com.github.bumptech.glide:glide:${glideVersion}",
+                            "org.parceler:parceler-api:${parcelerVersion}",
+                            "joda-time:joda-time:${jodaTimeVersion}"
+                    ],
+                    annotationProcessor : [
+                            "com.jakewharton:butterknife-compiler:${butterknifeVersion}",
+                            "org.projectlombok:lombok:${lombokVersion}",
+                            "org.parceler:parceler:${parcelerVersion}",
+                            "com.github.bumptech.glide:compiler:${glideVersion}",
+                            "com.google.dagger:dagger-compiler:${daggerVersion}",
+                            "com.google.dagger:dagger-android-processor:${daggerVersion}"
+                    ],
+                    compileOnly : [
+                            "org.projectlombok:lombok:${lombokVersion}"
+                    ],
+                    testImplementation : [
+                            "junit:junit:${jUnitVersion}",
+                            "org.assertj:assertj-core:${assertJVersion}",
+                            "org.mockito:mockito-core:${mockitoVersion}",
+                            "org.robolectric:robolectric:${robolectricVersion}",
+                            "com.squareup.assertj:assertj-android:${assertjVersion}",
+                            "org.robolectric:shadows-multidex:${robolectricVersion}",
+                            "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+                            "com.google.dagger:dagger-android-support:${daggerVersion}"
+                    ]
+            ],
+            domain : [
+                    implementation: [
+                            "org.parceler:parceler-api:${parcelerVersion}",
+
+                            "com.google.dagger:dagger-android-support:${daggerVersion}",
+                            "io.reactivex.rxjava2:rxandroid:${reactiveAndroidVersion}",
+                            "io.reactivex.rxjava2:rxjava:${reactiveJavaVersion}",
+                            "org.modelmapper:modelmapper:${modelmapperVersion}"
+                    ],
+                    implementationTransitive : [
+
+                    ],
+                    annotationProcessor : [
+                            "com.google.dagger:dagger-compiler:${daggerVersion}",
+                            "org.projectlombok:lombok:${lombokVersion}",
+                            "org.parceler:parceler:${parcelerVersion}",
+                            "com.google.dagger:dagger-compiler:${daggerVersion}",
+                            "com.google.dagger:dagger-android-processor:${daggerVersion}"
+                    ],
+                    compileOnly : [
+                            "org.projectlombok:lombok:${lombokVersion}"
+                    ],
+                    testImplementation : [
+                            "junit:junit:${jUnitVersion}",
+                            "org.assertj:assertj-core:${assertJVersion}",
+                            "org.mockito:mockito-core:${mockitoVersion}",
+                            "org.robolectric:robolectric:${robolectricVersion}",
+                            "com.squareup.assertj:assertj-android:${assertjVersion}",
+                            "org.robolectric:shadows-multidex:${robolectricVersion}",
+                            "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+                            "com.google.dagger:dagger-compiler:${daggerVersion}"
+                    ]
+            ],
+            data : [
+                    implementation: [
+
+                            "com.google.android.gms:play-services-gcm:${servicesVersion}",
+                            "com.google.dagger:dagger-android-support:${daggerVersion}",
+
+                            "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+                            "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+                            "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+                            "com.squareup.retrofit2:converter-scalars:${retrofitVersion}",
+                            "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+                            "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}",
+
+                            "org.parceler:parceler-api:${parcelerVersion}",
+                            "io.reactivex.rxjava2:rxandroid:${reactiveAndroidVersion}",
+                            "io.reactivex.rxjava2:rxjava:${reactiveJavaVersion}",
+                            "org.glassfish:javax.annotation:${javaxAnnotationVersion}",
+                            "org.modelmapper:modelmapper:${modelmapperVersion}"
+                    ],
+                    implementationTransitive : [
+
+                    ],
+                    annotationProcessor : [
+                            "com.google.dagger:dagger-compiler:${daggerVersion}",
+                            "org.projectlombok:lombok:${lombokVersion}",
+                            "org.parceler:parceler:${parcelerVersion}",
+                            "com.google.dagger:dagger-compiler:${daggerVersion}",
+                            "com.google.dagger:dagger-android-processor:${daggerVersion}"
+                    ],
+                    compileOnly : [
+                            "org.projectlombok:lombok:${lombokVersion}"
+                    ],
+                    testImplementation : [
+                            "com.android.support:recyclerview-v7:${supportLibraryVersion}"
+                    ]
+            ]
+    ]
+
+}
