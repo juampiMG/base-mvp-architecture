@@ -1,8 +1,6 @@
 package com.jp.app.common.presenter;
 
-import com.jp.app.common.view.IBaseView;
-
-public interface IBasePresenter<V extends IBaseView> {
+public interface IBasePresenter {
 
     void detachView();
 

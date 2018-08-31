@@ -1,9 +1,8 @@
 package com.jp.app.common.view;
 
 import com.jp.app.common.controller.BaseActivity;
-import com.jp.app.common.presenter.IBasePresenter;
 
-public interface IBaseView<V extends IBasePresenter> {
+public interface IBaseView {
 
     void showLoading();
 
