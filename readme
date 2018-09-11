@@ -6,3 +6,8 @@ FrameWorks:
 Dagger 2 (Dagger Injector)
 Retrofit
 Butterknife
+
+And Testing View and Presenter with:
+JUnit
+Robolectric
+Mockito
